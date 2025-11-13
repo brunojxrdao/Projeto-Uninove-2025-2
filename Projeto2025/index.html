@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASP - Exposição Interativa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+
+    <div class="loading-screen" id="loading">
+        <div class="loading-text">MASP</div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" id="site-title">MASP</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#exhibition" class="nav-link">Exposição</a></li>
+                <li><a href="#timeline" class="nav-link">História</a></li>
+                <li><a href="#stats" class="nav-link">Números</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="floating-element">🎨</div>
+        <div class="floating-element">🖼️</div>
+        <div class="floating-element">✨</div>
+        <div class="hero-content">
+            <h1 class="hero-title" id="hero-title">MASP</h1>
+            <p class="hero-subtitle" id="hero-subtitle">Museu de Arte de São Paulo</p>
+            <a href="#exhibition" class="hero-cta">Explorar Exposição</a>
+        </div>
+    </section>
+
+    <section class="exhibition" id="exhibition">
+        <div class="section-header fade-in">
+            <h2 class="section-title" id="exhibition-title">8 Obras Essenciais</h2>
+            <p class="section-subtitle">Uma jornada pela arte brasileira</p>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-grid" id="gallery-grid"></div>
+        </div>
+    </section>
+
+    <section class="timeline-section" id="timeline">
+        <div class="section-header fade-in">
+            <h2 class="section-title" style="color: white;">História do MASP</h2>
+            <p class="section-subtitle">Marcos importantes da instituição</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">1947</div>
+                    <h3 class="timeline-title">Fundação</h3>
+                    <p class="timeline-text">Assis Chateaubriand funda o Museu de Arte de São Paulo, com o objetivo de criar o primeiro museu moderno do país.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">1968</div>
+                    <h3 class="timeline-title">Nova Sede</h3>
+                    <p class="timeline-text">Inauguração da sede atual na Avenida Paulista, projetada por Lina Bo Bardi, com sua icônica arquitetura suspensa.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">1982</div>
+                    <h3 class="timeline-title">Tombamento</h3>
+                    <p class="timeline-text">O edifício do MASP é tombado pelo patrimônio histórico, reconhecendo sua importância arquitetônica e cultural.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2015</div>
+                    <h3 class="timeline-title">Renovação</h3>
+                    <p class="timeline-text">Conclusão da grande reforma que modernizou os espaços expositivos e melhorou a experiência dos visitantes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section" id="stats">
+        <div class="section-header fade-in">
+            <h2 class="section-title">MASP em Números</h2>
+            <p class="section-subtitle">Dados que impressionam</p>
+        </div>
+        <div class="stats-container">
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-target="11000">0</div>
+                <div class="stat-label">Obras no Acervo</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-target="700000">0</div>
+                <div class="stat-label">Visitantes por Ano</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-target="76">0</div>
+                <div class="stat-label">Anos de História</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-target="10000">0</div>
+                <div class="stat-label">m² de Área</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">MASP</div>
+            <p class="footer-text" id="footer-text">Av. Paulista, 1578 - Bela Vista, São Paulo</p>
+            
+        </div>
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">×</button>
+            <div class="modal-image" id="modal-image"></div>
+            <div class="modal-info">
+                <h2 class="modal-title" id="modal-title"></h2>
+                <div class="modal-artist" id="modal-artist"></div>
+                <div class="modal-year" id="modal-year"></div>
+                <p class="modal-description" id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
